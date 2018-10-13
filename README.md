@@ -4,7 +4,6 @@
 |name|string|null: false|
 |mail|string|null: false|
 |password|string|null: false|
-|user_id|integer|null: false|
 
 ### Association
 - belongs_to :members
@@ -15,7 +14,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false|
-|group_id|integer|null: false|
 
 ### Association
 - belongs_to :members
@@ -23,7 +21,6 @@
 
 
 ## membersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
