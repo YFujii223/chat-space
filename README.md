@@ -6,7 +6,7 @@
 |password|string|null: false|
 
 ### Association
-- belongs_to :members
+- has_many :groups, through: :members
 - has_many :messages
 
 
@@ -16,7 +16,7 @@
 |group_name|string|null: false|
 
 ### Association
-- belongs_to :members
+- has_many :users, through: :members
 - has_many :messages
 
 
