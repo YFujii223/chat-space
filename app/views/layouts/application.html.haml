@@ -8,16 +8,5 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body.body
     #wrap
-      %header.header チャットグループが作成されました。
-      .contents
-        #{render partial: "layouts/sidebar"}
-        .content
-          = yield
-          .footer
-            %input.text{type: "text",placeholder: "type a message"}
-            %form{action: "#"}
-              %label
-                %span{class: "filelabel"}
-                  =fa_icon "picture-o"
-                %input{type: "file", id: "filesend"}
-            .footer__send send
+      = render 'layouts/notifications'
+      = yield
