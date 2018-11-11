@@ -1,0 +1,21 @@
+.sidebar
+  .sidebar-top
+    .sidebar-top__name
+      = current_user.name
+    %ul.sidebar-top__lists
+      %li.list
+        = link_to do
+          = fa_icon 'pencil-square-o', class: 'icon-edit'
+      %li.list
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon-gear'
+  .groups
+    .group
+      .group__name sample
+      .group__message よろしくお願いします
+    .group
+      .group__name aeaaaaaaa
+      .group__message まだメッセージはありません
+    .group
+      .group__name sampleグループ
+      .group__message まだメッセージはありません
