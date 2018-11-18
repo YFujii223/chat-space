@@ -93,55 +93,40 @@
         }
       }
 
-      .content {
-        width: calc(100vw - 300px);
-        height: 100%;
-        padding: 0 0 90px 300px;
-        .edit {
-          height: 40px;
-          margin: 28px 40px 0 0;
-          padding: 0 20px;
-          font-size: 13px;
-          line-height: 40px;
-          color: #38AEF0;
-          float: right;
-          border: solid 1px #38AEF0;
-        }
-        .messages-top {
-          height: 54px;
-          padding: 35px 40px 0 40px;
-          border-bottom: 1px solid #eeeeee;
-          .messages-group {
-            font-size: 20px;
-            color: #333333;
-            &__members {
-              font-size: 12px;
-              color: #999999;
-            }
+      .messages-top {
+        height: 54px;
+        padding: 35px 40px 0 40px;
+        border-bottom: 1px solid #eeeeee;
+        .messages-group {
+          font-size: 20px;
+          color: #333333;
+          &__members {
+            font-size: 12px;
+            color: #999999;
           }
         }
-        .messages-bottom {
-          height: calc(100% - 225px);
-          padding: 6px 40px 0;
-          .message {
-            padding-top: 40px;
-            .member-name {
-              display:inline-block;
-              font-size: 16px;
-              font-weight: bold;
-              color: #434A54;
-            }
-            .update {
-              display: inline;
-              padding-left: 10px;
-              font-size: 12px;
-              color: #999999;
-            }
-            .words {
-              font-size: 14px;
-              color: #434A54;
-              padding-top: 10px;
-            }
+      }
+      .messages {
+        // height: calc(100% - 225px);
+        padding: 6px 40px 0px 340px;
+        .message {
+          padding-bottom: 40px;
+          .member-name {
+            display:inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            color: #434A54;
+          }
+          .update {
+            display: inline;
+            padding-left: 10px;
+            font-size: 12px;
+            color: #999999;
+          }
+          .words {
+            font-size: 14px;
+            color: #434A54;
+            padding-top: 10px;
           }
         }
       }
@@ -156,40 +141,47 @@
         border-bottom: solid 20px #AAAAAA;
         border-left: solid 40px #AAAAAA;
         border-right: solid 115px #AAAAAA;
-        form {
+        .form {
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
-        }
-        .text {
-          width: calc(100vw - 465px);
-          height: 50px;
-          border: 0px;
-          font-size: 16px;
-          color: #434A54;
-          padding-left: 10px;
-        }
-        form {
           width: 100%;
+          height: 50px;
+          &__message {
+            width: calc(100vw - 465px);
+            height: 50px;
+            border: 0px;
+            font-size: 16px;
+            color: #434A54;
+            padding-left: 10px;
+          }
+          &__mask{
+            &__image{
+              .icon{
+                  float: right;
+                  top: 50%;
+                  transform: translateY(-33px);
+                  padding-right: 25px;
+              }
+              .hidden {
+                display: none;
+              }
+            }
+          }
+          &__submit {
+            height: 50px;
+            width: 90px;
+            padding-bottom: 10px;
+            color: $mainFontWhite;
+            text-align: center;
+            line-height: 50px;
+            background-color: #38AEF0;
+            position: absolute;
+            top: 0px;
+            right: -100px;
+          }
         }
-         .fa.fa-picture-o {
-          float: right;
-          padding-right: 25px;
-        }
-        #filesend {
-          display: none;
-        }
-        &__send {
-          height: 40px;
-          width: 90px;
-          padding-bottom: 10px;
-          color: $white;
-          text-align: center;
-          background-color: #38AEF0;
-          position: absolute;
-          top: 0px;
-          right: -100px;
-        }
+
       }
 
     }
