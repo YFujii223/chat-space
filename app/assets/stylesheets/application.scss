@@ -154,40 +154,48 @@
         border-bottom: solid 20px #AAAAAA;
         border-left: solid 40px #AAAAAA;
         border-right: solid 115px #AAAAAA;
-        form {
+        .form {
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
-        }
-        .text {
-          width: calc(100vw - 465px);
-          height: 50px;
-          border: 0px;
-          font-size: 16px;
-          color: #434A54;
-          padding-left: 10px;
-        }
-        form {
           width: 100%;
+          height: 50px;
+          &__message {
+            width: calc(100vw - 465px);
+            height: 50px;
+            border: 0px;
+            font-size: 16px;
+            color: #434A54;
+            padding-left: 10px;
+          }
+          &__mask{
+            &__image{
+              .icon{
+                  float: right;
+                  top: 50%;
+                  transform: translateY(-33px);
+                  padding-right: 25px;
+              }
+              .hidden {
+                display: none;
+              }
+            }
+          }
+          &__submit {
+            height: 50px;
+            width: 90px;
+            padding-bottom: 10px;
+            color: $mainFontWhite;
+            text-align: center;
+            line-height: 50px;
+            background-color: #38AEF0;
+            position: absolute;
+            top: 0px;
+            right: -100px;
+          }
         }
-         .fa.fa-picture-o {
-          float: right;
-          padding-right: 25px;
-        }
-        #filesend {
-          display: none;
-        }
-        &__send {
-          height: 40px;
-          width: 90px;
-          padding-bottom: 10px;
-          color: $mainFontWhite;
-          text-align: center;
-          background-color: #38AEF0;
-          position: absolute;
-          top: 0px;
-          right: -100px;
-        }
+
+
       }
 
     }
