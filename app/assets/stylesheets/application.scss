@@ -24,7 +24,7 @@
       .header {
         height: 40px;
         width: 100%;
-        background-color: #38AEF0;
+        background-color: $light_blue;
         color: $white;
         text-align: center;
         line-height: 40px;
@@ -41,7 +41,7 @@
           width: 260px;
           padding-left: 20px;
           padding-right: 20px;
-          background-color: #253141;
+          background-color: $sidebar_background;
           float: left;
           position:relative;
 
@@ -76,7 +76,7 @@
           padding-left: 20px;
           padding-right: 20px;
           color: $white;
-          background-color: #2f3e51;
+          background-color: $groups_bacckground;
           float: left;
           .group {
             padding: 20px 0 20px;
@@ -96,13 +96,13 @@
       .messages-top {
         height: 54px;
         padding: 35px 40px 0 340px;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid $gray;
         .messages-group {
           font-size: 20px;
-          color: #333333;
+          color: $dark_gray;
           &__members {
             font-size: 12px;
-            color: #999999;
+            color: $light_gray;
           }
         }
       }
@@ -115,17 +115,17 @@
             display:inline-block;
             font-size: 16px;
             font-weight: bold;
-            color: #434A54;
+            color: $content_navy;
           }
           .update {
             display: inline;
             padding-left: 10px;
             font-size: 12px;
-            color: #999999;
+            color: $light_gray;
           }
           .content {
             font-size: 14px;
-            color: #434A54;
+            color: $content_navy;
             padding-top: 10px;
           }
         }
@@ -137,10 +137,10 @@
         line-height: 50px;
         width: calc(100vw - 455px);
         margin-left: 300px;
-        border-top: solid 20px #AAAAAA;
-        border-bottom: solid 20px #AAAAAA;
-        border-left: solid 40px #AAAAAA;
-        border-right: solid 115px #AAAAAA;
+        border-top: solid 20px $footer_gray;
+        border-bottom: solid 20px $footer_gray;
+        border-left: solid 40px $footer_gray;
+        border-right: solid 115px $footer_gray;
         .form {
           position: absolute;
           top: 50%;
@@ -152,7 +152,7 @@
             height: 50px;
             border: 0px;
             font-size: 16px;
-            color: #434A54;
+            color: $content_navy;
             padding-left: 10px;
           }
           &__mask{
@@ -175,7 +175,7 @@
             color: $white;
             text-align: center;
             line-height: 50px;
-            background-color: #38AEF0;
+            background-color: $light_blue;
             position: absolute;
             top: 0px;
             right: -100px;
