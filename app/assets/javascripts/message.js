@@ -1,5 +1,9 @@
 $(function(){
   function buildHTML(message){
+    var insertImage = '';
+    if (message.image.url) {
+      insertImage = `<img src="${message.image.url}">`;
+    }
     var html = `<div class="message">
                   <div class="user-name">
                     ${ message.user_name }
@@ -11,6 +15,9 @@ $(function(){
                     <p class="content">
                       ${ message.content }
                     </p>
+                  </div>
+                  <div class="lower-message__image">
+                     ${insertImage}
                   </div>
                 </div>`
       return html;
@@ -32,6 +39,7 @@ $(function(){
       })
     .done(function(data){
       var html = buildHTML(data);
+      console.log(data);
       $('.messages').append(html);
       $('.form__message').val('');
       $('.form__submit').prop('disabled', false);
