@@ -1,6 +1,7 @@
-#{render partial: "shared/side_bar"}
+= render partial: "shared/side_bar"
 .messages-top
   .messages-group
     = @group.name
-= render @messages
-#{render partial: "shared/footer"}
+.messages
+  = render @messages
+= render partial: "shared/footer"

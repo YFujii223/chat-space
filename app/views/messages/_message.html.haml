@@ -1,11 +1,10 @@
-.messages
-  .message
-    .member-name
-      = message.user.name
-    .update
-      / # = format_posted_time(message.created_at)
-    .words
-      - if message.content.present?
-        %p.lower-message__content
-          = message.content
-      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+.message
+  .user-name
+    = message.user.name
+  .update
+    = message.created_at
+  .content
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
