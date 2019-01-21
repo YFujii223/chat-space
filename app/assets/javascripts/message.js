@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     var insertImage = '';
-    message.image.url ? {
+    if(message.image.url) {
       insertImage = `<div class="lower-message__image">
                        <img src="${message.image.url}">
                      </div>`;
@@ -19,8 +19,8 @@ $(function(){
                     </p>
                   </div>
                   ${insertImage}
-                </div>`
-      return html;
+                </div>`;
+    return html
   }
 
   function scroll() {
@@ -41,7 +41,6 @@ $(function(){
       })
     .done(function(data){
       var html = buildHTML(data);
-      console.log(data);
       $('.messages').append(html);
       $('.form__message').val('');
       $('.form__submit').prop('disabled', false);
